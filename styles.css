@@ -1,7 +1,6 @@
 .mobile {
   width: 380px;
   height: auto;
-  
 }
 
 .Bar {
@@ -46,10 +45,12 @@ body span {
   width: 24px;
   height: 24px;
 }
+
 .frame-4,
 .frame-4 * {
   box-sizing: border-box;
 }
+
 .frame-4 {
   padding: 10px 12px 10px 12px;
   display: flex;
@@ -65,7 +66,7 @@ body span {
 .portfolio {
   color: var(--neutrals-n-600, #344563);
   text-align: center;
-  font: var(--body-3-bolder, 500 15px/20px "Poppins", sans-serif);
+  font: var(--body-3-bolder, 500 15px/20px "Poppins,sans-serif", sans-serif);
   position: relative;
   display: flex;
   align-items: center;
@@ -121,6 +122,16 @@ body span {
   display: inline;
 }
 
+.contactme p {
+  color: var(--primary-b-50, #ebebff);
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+}
+
 .Main div p {
   color: var(--neutrals-n-800, #172b4d);
   font-family: Poppins, sans-serif;
@@ -173,7 +184,8 @@ body span {
   margin-left: 16px;
   margin-top: 16px;
 }
-.snapshot img{
+
+.snapshot img {
   width: 295px;
   height: 220px;
   border-radius: 8px;
@@ -286,6 +298,24 @@ button:hover {
   margin-left: -1px;
 }
 
+.contactme form button {
+  border-radius: 8px;
+  background: var(--neutrals-n-0, #fff);
+  text-align: center;
+  margin-left: 30px;
+  width: 142px;
+  height: 48px;
+  color: var(--primary-b-400, #6070ff);
+
+  /* Button /Normal */
+  font-family: Poppins, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 141.176% */
+  letter-spacing: 0.51px;
+}
+
 .card2 button:hover {
   background-color: #dfe1e6;
 }
@@ -302,6 +332,12 @@ button:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+
+.contactme svg {
+  position: absolute;
+  margin-left: 158px;
+  margin-top: 20px;
 }
 
 .card2 nav svg {
@@ -392,95 +428,70 @@ button:hover {
 #skilltext {
   margin-left: 2px;
 }
-.contactme{
-  background-color: #6070FF;
+
+.contactme {
+  background-color: #6070ff;
   height: 800px;
   border-top-left-radius: 50px;
 }
-.contactme svg{
-  position: absolute;
-  margin-left: 158px;
-  margin-top: 20px;
+
+.contactme h2 {
+  color: var(--neutrals-n-0, #fff);
+  text-align: center;/* Header / 2 */
+  font-family: poppins, sans-serif;
+  font-size: 40px;
+  font-style: poppins;
+  font-weight: 700;
+  line-height: 52px; /* 130% */
+  padding-top: 103px;
 }
-.contactme h2{
-  color: var(--neutrals-n-0, #FFF);
-text-align: center;/* Header / 2 */
-font-family: Poppins;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 52px; /* 130% */
-padding-top: 103px;
-}
-.contactme p{
-  color: var(--primary-b-50, #EBEBFF);
-text-align: center;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 140% */
-}
+
 .contactme form {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
 }
-.contactme form input{
+
+.contactme form input {
   width: 327px;
-height: 48px;
-flex-shrink: 0;
-border-radius: 8px;
-border: 1px solid var(--base-100, #CFD8DC);
-background: var(--mono-white, #FFF);
-margin-left:24px;
-}
-.contactme form input::placeholder{
-  color: var(--neutral-n-800, #172B4D);
-font-family: Poppins;
-font-size: 17px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px; /* 117.647% */
-padding-left:16px;
-}
-.contactme form textarea{
-  width: 320px;
-height: 140px;
-flex-shrink: 0;
-margin-left: 30px;
-border-radius: 8px;
-border: 1px solid var(--base-100, #CFD8DC);
-background: var(--mono-white, #FFF);
-}
-.contactme form textarea::placeholder{
-  color: var(--neutrals-n-60, #B3BAC5);
-
-/* Input /Normal */
-font-family: Poppins;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 160% */
-padding-left: 12px;
-padding-top: 10px;
-}
-.contactme form button{
+  height: 48px;
+  flex-shrink: 0;
   border-radius: 8px;
-background: var(--neutrals-n-0, #FFF);
-text-align: center;
-margin-left: 30px;
-width: 142px;
-height: 48px;
-color: var(--primary-b-400, #6070FF);
-text-align: center;
+  border: 1px solid var(--base-100, #cfd8dc);
+  background: var(--mono-white, #fff);
+  margin-left: 24px;
+}
 
-/* Button /Normal */
-font-family: Poppins;
-font-size: 17px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 141.176% */
-letter-spacing: 0.51px;
+.contactme form input::placeholder {
+  color: var(--neutral-n-800, #172b4d);
+  font-family: Poppins, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 117.647% */
+  padding-left: 16px;
+}
+
+.contactme form textarea {
+  width: 320px;
+  height: 140px;
+  flex-shrink: 0;
+  margin-left: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--base-100, #cfd8dc);
+  background: var(--mono-white, #fff);
+}
+
+.contactme form textarea::placeholder {
+  color: var(--neutrals-n-60, #b3bac5);
+
+  /* Input /Normal */
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 160% */
+  padding-left: 12px;
+  padding-top: 10px;
 }
