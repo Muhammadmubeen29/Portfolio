@@ -1,10 +1,18 @@
+body {
+  background-color: #f2f2f9;
+}
+
 .mobile {
-  width: 380px;
+  width: 375px;
   height: auto;
 }
 
+.intro {
+  border-bottom-left-radius: 80px;
+  background-color: white;
+}
+
 .Bar {
-  width: 375px;
   display: flex;
 }
 
@@ -16,7 +24,11 @@
   padding-left: 12px;
 }
 
-body span {
+.desktopBackground {
+  display: none;
+}
+
+.body span {
   padding-left: 24px;
   color: var(--primary-b-300, #7f8cff);
   font-family: Poppins, sans-serif;
@@ -44,33 +56,6 @@ body span {
   padding: 8px 8px 8px 8px;
   width: 24px;
   height: 24px;
-}
-
-.frame-4,
-.frame-4 * {
-  box-sizing: border-box;
-}
-
-.frame-4 {
-  padding: 10px 12px 10px 12px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio {
-  color: var(--neutrals-n-600, #344563);
-  text-align: center;
-  font: var(--body-3-bolder, 500 15px/20px "Poppins,sans-serif", sans-serif);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .body {
@@ -122,14 +107,18 @@ body span {
   display: inline;
 }
 
-.contactme p {
+.contact p {
   color: var(--primary-b-50, #ebebff);
   text-align: center;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px; /* 140% */
+}
+
+.desktopBar {
+  display: none;
 }
 
 .Main div p {
@@ -185,12 +174,6 @@ body span {
   margin-top: 16px;
 }
 
-.snapshot img {
-  width: 295px;
-  height: 220px;
-  border-radius: 8px;
-}
-
 .content {
   margin-top: 12px;
   margin-left: 16px;
@@ -239,6 +222,8 @@ button:hover {
   padding-top: 114px;
   grid-row-gap: 24px;
   padding-bottom: 114px;
+  background-color: white;
+  border-top-right-radius: 80px;
 }
 
 .card2 {
@@ -267,7 +252,7 @@ button:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 2px;
-  margin-left: -23px;
+  margin-left: 2px;
 }
 
 .card2 svg {
@@ -298,22 +283,26 @@ button:hover {
   margin-left: -1px;
 }
 
-.contactme form button {
-  border-radius: 8px;
-  background: var(--neutrals-n-0, #fff);
-  text-align: center;
-  margin-left: 30px;
-  width: 142px;
-  height: 48px;
-  color: var(--primary-b-400, #6070ff);
+.desktopWorksection {
+  display: none;
+}
 
-  /* Button /Normal */
-  font-family: Poppins, sans-serif;
+.contact form button {
+  height: 48px;
+  width: 142px;
+  color: var(--primary-b-400, #6070ff);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 141.176% */
   letter-spacing: 0.51px;
+  border-radius: 8px;
+  border: var(--neutrals-n-0, #fff);
+  margin-left: 25px;
+  background-color: white;
+  margin-top: 12px;
 }
 
 .card2 button:hover {
@@ -332,12 +321,6 @@ button:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-}
-
-.contactme svg {
-  position: absolute;
-  margin-left: 158px;
-  margin-top: 20px;
 }
 
 .card2 nav svg {
@@ -429,69 +412,242 @@ button:hover {
   margin-left: 2px;
 }
 
-.contactme {
-  background-color: #6070ff;
-  height: 800px;
-  border-top-left-radius: 50px;
+.languages {
+  display: none;
 }
 
-.contactme h2 {
-  color: var(--neutrals-n-0, #fff);
-  text-align: center;/* Header / 2 */
-  font-family: poppins, sans-serif;
+.contact {
+  margin-left: -9px;
+  margin-bottom: -9px;
+  background-color: #6070ff;
+  border-top-left-radius: 15%;
+  margin-top: 240px;
+  background-image: url('contact\ form\ shapes-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-bottom: 55px;
+}
+
+.contact h2 {
+  color: white;
   font-size: 40px;
-  font-style: poppins;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  line-height: 52px; /* 130% */
+  line-height: 52px;
+  word-wrap: break-word;
+  text-align: center;
   padding-top: 103px;
 }
 
-.contactme form {
-  padding-top: 20px;
+.contact form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 7px;
+  margin-top: 20px;
 }
 
-.contactme form input {
+.contact form input {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  border: 1px solid var(--base-100, #cfd8dc);
+  background: var(--mono-white, #fff);
   width: 327px;
   height: 48px;
+  margin-left: 24px;
+  margin-top: 30px;
+}
+
+.contact form textarea {
+  font-family: 'Poppins', sans-serif;
+  width: 327px;
+  height: 170px;
   flex-shrink: 0;
   border-radius: 8px;
   border: 1px solid var(--base-100, #cfd8dc);
   background: var(--mono-white, #fff);
   margin-left: 24px;
+  margin-top: 13px;
 }
 
-.contactme form input::placeholder {
-  color: var(--neutral-n-800, #172b4d);
-  font-family: Poppins, sans-serif;
+.contact form input::placeholder {
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 117.647% */
-  padding-left: 16px;
+  padding-left: 10px;
+  color: #999;
 }
 
-.contactme form textarea {
-  width: 320px;
-  height: 140px;
-  flex-shrink: 0;
-  margin-left: 30px;
-  border-radius: 8px;
-  border: 1px solid var(--base-100, #cfd8dc);
-  background: var(--mono-white, #fff);
-}
-
-.contactme form textarea::placeholder {
-  color: var(--neutrals-n-60, #b3bac5);
-
-  /* Input /Normal */
-  font-family: Poppins, sans-serif;
+.contact form textarea::placeholder {
   font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 160% */
-  padding-left: 12px;
   padding-top: 10px;
+  padding-left: 10px;
+  color: #999;
+}
+
+.contact form button:hover {
+  background-color: #7a869a;
+}
+
+.contactText {
+  width: 327px;
+  height: 127px;
+  margin-left: 18px;
+}
+
+@media (min-width: 800px) {
+  .mobile {
+    width: 1440px;
+    height: 846px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .background {
+    width: 1500px;
+    height: 800px;
+    margin-top: 60px;
+  }
+
+  .mylogo {
+    margin-left: 150px;
+  }
+
+  .desktopBar {
+    display: flex;
+    margin-left: 786px;
+    margin-top: -5px;
+  }
+
+  .desktopBar ul li {
+    display: inline;
+    padding: 5px;
+    color: var(--neutrals-n-600, #344563);
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .body {
+    margin-top: 194px;
+    margin-left: 276px;
+  }
+
+  .bio {
+    display: flex;
+    justify-content: first baseline;
+    width: 920px;
+    height: 98px;
+    padding-left: 18px;
+  }
+
+  .worksection {
+    display: none;
+  }
+
+  .desktopWorksection {
+    background-color: #f2f2f9;
+    display: grid;
+    grid-template-rows: 590px 630px 590px 590px;
+    padding-top: 144px;
+    padding-bottom: 114px;
+    grid-row-gap: 88px;
+  }
+
+  .card {
+    width: 1156px;
+    height: 496px;
+    margin-left: 100px;
+    flex-direction: row;
+  }
+
+  .content {
+    margin-left: 45px;
+    width: 800px;
+  }
+
+  .content h2 {
+    display: block;
+  }
+
+  .content img {
+    margin-top: -10px;
+  }
+
+  .rightImage {
+    width: 544px;
+    height: 448px;
+    margin-left: 230px;
+  }
+
+  .content p {
+    width: 450px;
+  }
+
+  .rightsnapshot {
+    margin-top: 30px;
+    margin-left: -250px;
+    padding-right: 12px;
+  }
+
+  .contactText {
+    margin-left: 436px;
+    width: 569px;
+    height: 102px;
+  }
+
+  .contact form {
+    margin-left: 496px;
+  }
+
+  .contact form input {
+    width: 447px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid var(--base-100, #cfd8dc);
+    background: var(--mono-white, #fff);
+  }
+
+  .contact form textarea {
+    width: 447px;
+    border-radius: 2px;
+    border: 1px solid var(--base-100, #cfd8dc);
+    background: var(--mono-white, #fff);
+  }
+
+  .contact form button {
+    margin-top: 20px;
+    margin-left: 165px;
+  }
+
+  .aboutsection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .list {
+    display: none;
+  }
+
+  #second h3 {
+    display: none;
+  }
+
+  .languages {
+    width: 684px;
+  }
+
+  #first {
+    margin-left: -100px;
+  }
 }
